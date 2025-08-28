@@ -12,18 +12,8 @@ const PORT = process.env.PORT || 5000;
 // MongoDB connection
 connectMongoDB();
 
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://upscale-tes-n7cy.vercel.app",
-];
-
 // Middleware
-app.use(
-  cors({
-    origin: allowedOrigins,
-    credentials: true,
-  })
-);
+app.use(cors());
 
 app.use(express.json());
 
