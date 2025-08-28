@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 // MongoDB connection
 connectMongoDB();
 
-const allowedOrigins = ["http://localhost:3000"];
+const allowedOrigins = ["http://localhost:5173"];
 
 // Middleware
 app.use(
