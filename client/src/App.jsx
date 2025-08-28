@@ -1,11 +1,13 @@
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
 import {
   createBrowserRouter,
   Navigate,
   RouterProvider,
 } from "react-router-dom";
-import Loadable from "./components/Loadable";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import DashboardLayout from "./components/Layout";
+import Loadable from "./components/Loadable";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
@@ -58,6 +60,16 @@ function App() {
   return (
     <div>
       <QueryClientProvider client={queryClient}>
+        <ToastContainer
+          position="top-right"
+          autoClose={3000} // durasi toast muncul (ms)
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
         <RouterProvider router={router} />
       </QueryClientProvider>
     </div>

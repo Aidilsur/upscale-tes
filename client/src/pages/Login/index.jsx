@@ -5,6 +5,7 @@ import api from "../../utils/api";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import useAuthStore from "../../store/authStore";
+import { toast } from "react-toastify";
 
 function Login() {
   const { setUser } = useAuthStore();
@@ -33,10 +34,11 @@ function Login() {
         const userRes = await api.get("/profile");
 
         setUser(userRes.data);
+        toast.success("welcome");
         navigate("/");
       }
     } catch (error) {
-      console.log("error :", error);
+      toast.error(error.response.data.message);
     }
   }
 

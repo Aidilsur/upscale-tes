@@ -1,5 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import api from "../../../utils/api";
+import { toast } from "react-toastify";
 
 function useUpdateTask(id) {
   const queryClient = useQueryClient();
@@ -11,7 +12,10 @@ function useUpdateTask(id) {
       return response;
     },
     onSuccess: (res) => {
-      console.log("response :", res.message);
+      toast.success(res.data.message);
+    },
+    onError: (error) => {
+      toast.error(error.response.data.message);
     },
     onSettled: () => {
       queryClient.invalidateQueries("getAllUser");
