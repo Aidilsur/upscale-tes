@@ -13,12 +13,7 @@ const PORT = process.env.PORT || 5000;
 connectMongoDB();
 
 // Middleware
-app.use(
-  cors({
-    origin: process.env.CLIENT_ORIGIN,
-    credentials: true,
-  })
-);
+app.use(cors());
 
 app.use(express.json());
 
