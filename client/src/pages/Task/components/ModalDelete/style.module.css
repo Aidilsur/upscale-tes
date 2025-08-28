@@ -1,0 +1,48 @@
+.modalDelete {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.message {
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  color: #444;
+  margin: 2rem 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: var(--font-family);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cancel {
+  background-color: #eee;
+  color: #333;
+}
+
+.cancel:hover {
+  background-color: #ddd;
+}
+
+.delete {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete:hover {
+  background-color: #c0392b;
+}

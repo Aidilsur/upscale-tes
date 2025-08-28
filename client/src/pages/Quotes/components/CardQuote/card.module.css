@@ -1,0 +1,19 @@
+.cardDesc {
+  font-size: 1rem;
+  color: #333;
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+  font-style: normal;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cardUsername {
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
+  margin: 0;
+}

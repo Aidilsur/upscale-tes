@@ -1,0 +1,31 @@
+.action {
+  max-width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.action button {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.content {
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.quotesWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.noData {
+  margin-top: 10rem;
+  text-align: center;
+}

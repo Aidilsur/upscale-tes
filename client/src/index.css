@@ -1,0 +1,31 @@
+:root {
+  --primary-color: #4a90e2;
+  --primary-color-hover: #357abd;
+  --text-color: #fff;
+  --card-bg: #f7f7f7;
+  --card-border: #cbcbcc;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+ul {
+  text-decoration: none;
+  list-style: none;
+}
