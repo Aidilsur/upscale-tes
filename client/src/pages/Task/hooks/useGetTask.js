@@ -11,6 +11,7 @@ function useGetTask(status) {
       const response = await api.get(`/task${queryString}`);
       return response.data?.tasks || [];
     },
+    retry: 1,
   });
 }
 
