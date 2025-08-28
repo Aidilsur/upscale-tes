@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 
 const connectMongoDB = async () => {
   try {
+    console.log("loading ...");
     await mongoose.connect(process.env.MONGO_URI, {
       dbName: "database",
     });
